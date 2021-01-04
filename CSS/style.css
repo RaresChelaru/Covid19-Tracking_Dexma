@@ -25,20 +25,14 @@ header{
 }
 
 button{
-    height: 35px;
+    height: 30px;
     background-color: #FE4A49;
+    font-family: 'Montserrat', sans-serif; 
+    margin: 2px;
     border: none;
-    padding-left: 2.5px;
-    padding-right: 2.5px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 button:hover{
     background-color: #f66464;
+    border: 1px solid #000000;
 }  
-
-.grafico{
-    display: flex;
-    text-align: center;
-    margin: 0 auto;
-}
