@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" type="text/css" href="CSS/style.css" />
 
-  <title>10 days of covid</title>
+  <title>10 Giorni di dati sul Covid-19</title>
   <!-- https://github.com/pcm-dpc/COVID-19/tree/master/dati-andamento-nazionale -->
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,18 +17,20 @@
 
 </head>
 
-<body onload="graficoRicoveratiConSintomi()">
+<body onload="graficoTotalePositivi()">
 
-  <header><h1>10 Days of Covid-19</h1></header>
+  <header><h1>10 Giorni di dati sul Covid-19</h1></header>
 
   <div class="container">
 
-    <div class="row" class="graphContainer">
+      <button onclick="graficoTotalePositivi()">Positivi</button>
       <button onclick=" graficoTerapiaIntensiva()" >Terapia Intensiva</button>
       <button onclick="graficoRicoveratiConSintomi()">Ricoverati con sintomi</button>
       <button onclick="graficoTamponi()">Tamponi</button>
       <button onclick="graficoIsolamentiDomiciliari()">Isolamenti domiciliari</button>
-    </div>
+      <button onclick="graficoTotaleCasi()">Totale Casi</button>
+      <button onclick="graficoRapportoNuovicasiTamponi()()">Rapporto Nuovi casi/Tamponi</button>
+
 
     <div class="grafico" id="chartContainer">
       
@@ -41,6 +43,9 @@
         require 'PHP/graficoRicoveratiConSintomi.php';
         require 'PHP/graficoTamponi.php';
         require 'PHP/graficoIsolamentoDomiciliare.php';
+        require 'PHP/graficoTotalePositivi.php';
+        require 'PHP/graficoTotaleCasi.php';
+        require 'PHP/graficoRapportoNuovicasiTamponi.php';
              
       ?>
 

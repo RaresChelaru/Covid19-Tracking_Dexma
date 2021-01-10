@@ -60,7 +60,7 @@ function graficoRicoveratiConSintomi()
         }
 });
 
-chart.canvas.parentNode.style.width = '80%';
+
 
 clear('ricoverati_con_sintomi');
 }

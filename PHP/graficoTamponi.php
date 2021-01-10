@@ -60,7 +60,7 @@ function graficoTamponi()
         }
 });
 
-chart.canvas.parentNode.style.width = '80%';
+
 
 clear('tamponi');
 }

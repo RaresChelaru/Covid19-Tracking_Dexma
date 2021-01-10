@@ -60,7 +60,7 @@ function graficoIsolamentiDomiciliari()
         }
 });
 
-chart.canvas.parentNode.style.width = '80%';
+
 
 clear('isolamento_domiciliare');
 }

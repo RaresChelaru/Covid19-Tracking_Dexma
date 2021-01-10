@@ -1,14 +1,14 @@
-<canvas id="totale_positivi" class="Grafici"></canvas>
+<canvas id="totale_casi" class="Grafici"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 <?php
 $lenDate = count($date);
 ?>
 <script>
-function graficoTotalePositivi()
+function graficoTotaleCasi()
 {
 
-    var ctx = document.getElementById('totale_positivi').getContext('2d');
+    var ctx = document.getElementById('totale_casi').getContext('2d');
 
     
 
@@ -33,21 +33,21 @@ function graficoTotalePositivi()
             ],
         
             datasets: [{
-                label: 'Positivi',
+                label: 'Totale casi',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(0, 0, 0)',
                 data: 
                 [
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 10]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 9]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 8]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 7]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 6]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 5]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 4]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 3]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 2]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 1]);?>
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 10]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 9]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 8]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 7]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 6]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 5]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 4]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 3]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 2]);?>,
+                    <?php echo json_encode($totale_casi[count($totale_casi) - 1]);?>
                 ]
             }]
         },
@@ -60,7 +60,9 @@ function graficoTotalePositivi()
         }
 });
 
-clear('totale_positivi');
+
+
+clear('totale_casi');
 }
 
 

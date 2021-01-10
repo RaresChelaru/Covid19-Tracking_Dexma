@@ -1,14 +1,14 @@
-<canvas id="totale_positivi" class="Grafici"></canvas>
+<canvas id="RapportoCasiTamponi" class="Grafici"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 <?php
 $lenDate = count($date);
 ?>
 <script>
-function graficoTotalePositivi()
+function graficoRapportoNuovicasiTamponi()
 {
 
-    var ctx = document.getElementById('totale_positivi').getContext('2d');
+    var ctx = document.getElementById('RapportoCasiTamponi').getContext('2d');
 
     
 
@@ -33,21 +33,21 @@ function graficoTotalePositivi()
             ],
         
             datasets: [{
-                label: 'Positivi',
+                label: 'Rapporto casi/tamponi',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(0, 0, 0)',
                 data: 
                 [
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 10]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 9]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 8]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 7]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 6]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 5]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 4]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 3]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 2]);?>,
-                    <?php echo json_encode($totale_positivi[count($totale_positivi) - 1]);?>
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 10]/$tamponi[count($tamponi) - 10]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 9]/$tamponi[count($tamponi) - 9]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 8]/$tamponi[count($tamponi) - 8]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 7]/$tamponi[count($tamponi) - 7]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 6]/$tamponi[count($tamponi) - 6]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 5]/$tamponi[count($tamponi) - 5]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 4]/$tamponi[count($tamponi) - 4]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 3]/$tamponi[count($tamponi) - 3]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 2]/$tamponi[count($tamponi) - 2]);?>,
+                    <?php echo json_encode($nuovi_positivi[count($nuovi_positivi) - 1]/$tamponi[count($tamponi) - 1]);?>
                 ]
             }]
         },
@@ -58,9 +58,12 @@ function graficoTotalePositivi()
         options: {
             responsive: true,
         }
+        
+    
 });
 
-clear('totale_positivi');
+
+clear('RapportoCasiTamponi');
 }
 
 
